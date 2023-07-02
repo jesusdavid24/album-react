@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+
+body {
+ background-color: white;
+    padding: 16px;
+}
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px 24px;
+}
+.cards-container .card {
+    background-color: white;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    border: solid 1px rgb(240, 240, 240);
+    min-height: 190px;
+    box-shadow: 1px 1px 1px 3px rgba(19, 18, 18, 0.035);
+}
+.cards-container .card .card-media {
+    flex: 2;
+    display: flex;
+}
+.cards-container .card .card-media img {
+    object-fit: cover;
+    width: 100%;
+}
+.cards-container .card .card-details {
+    flex: 3;
+    padding: 16px 24px;
+}
+.cards-container .card .card-details {
+    display: flex;
+    flex-direction: column;
+}
+.cards-container .card .card-details__title--artist-name {
+    font-weight: bold;
+    font-size: 20px;
+}
+.cards-container .card .card-details__title--artist-type {
+    font-size: 18px;
+    font-style: italic;
+    color: #9a9a9a;
+}
+.cards-container .card .card-details__album {
+    font-size: 16px;
+    margin: auto 0px;
+    color: #706d6d;
+}
+.cards-container .card .card-details__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cards-container .card .card-details__footer--genre {
+    background-color: hotpink;
+    color: white;
+    padding: 4px 8px;
+    text-transform: uppercase;
+    border-radius: 18px;
+}
+.cards-container .card .card-details__footer--actions {
+    font-size: 18px;
+}
+.cards-container .card .card-details__footer--actions a {
+    text-decoration: none;
+    cursor: pointer;
+    filter: grayscale(1);
+    transition: all .25s;
+}
+
+.cards-container .card .card-details__footer--actions a.liked {
+    text-decoration: none;
+    filter: none;
+}
